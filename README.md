@@ -14,13 +14,20 @@ A estrutura do projeto segue as práticas comuns de organização de um projeto 
 
 
 ## Configuração do Ambiente de Testes
-O projeto está configurado para utilizar o banco de dados H2 em memória para os testes. As configurações estão presentes no arquivo `application.properties`.
+O projeto está configurado para utilizar o banco de dados H2 em memória para os testes. As configurações estão presentes no arquivo `application-test.properties`.
 
 ```properties
-# Configurações do Banco de Dados H2
-spring.datasource.url=jdbc:h2:mem:testdb
+# Dados de conexão com o banco H2
 spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.username=sa
-spring.datasource.password=password
+spring.datasource.password=
+# H2 Client
 spring.h2.console.enabled=true
-
+spring.h2.console.path=/h2-console
+# JPA, SQL
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.defer-datasource-initialization=true
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
