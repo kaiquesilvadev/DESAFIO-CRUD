@@ -38,3 +38,9 @@ spring.jpa.properties.hibernate.format_sql=true
 - POST `/clients:` Insere um novo cliente com base nos dados fornecidos no corpo da requisição.
 - PUT `/clients/{id}`: Atualiza as informações do cliente com o ID especificado, com base nos dados fornecidos no corpo da requisição.
 - DELETE `/clients/{id}`: Deleta o cliente com o ID especificado.
+
+## Tratamento de Exceções
+O projeto trata as seguintes exceções:
+
+- Id não encontrado (GET por id, PUT e DELETE): Retorna código 404.
+- Erro de validação: Retorna código 422 e mensagens customizadas para cada campo inválido.
