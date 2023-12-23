@@ -12,3 +12,15 @@ Este projeto é uma aplicação Spring Boot que implementa um CRUD completo para
 ## Estrutura do Projeto
 A estrutura do projeto segue as práticas comuns de organização de um projeto Spring Boot:
 
+
+## Configuração do Ambiente de Testes
+O projeto está configurado para utilizar o banco de dados H2 em memória para os testes. As configurações estão presentes no arquivo `application.properties`.
+
+```properties
+# Configurações do Banco de Dados H2
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.h2.console.enabled=true
+
