@@ -31,3 +31,10 @@ spring.jpa.defer-datasource-initialization=true
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 ```
+
+## Endpoints
+- GET `/clients:` Retorna a lista de clientes de forma paginada.
+- GET `/clients/{id}`: Retorna as informações do cliente com o ID especificado.
+- POST `/clients:` Insere um novo cliente com base nos dados fornecidos no corpo da requisição.
+- PUT `/clients/{id}`: Atualiza as informações do cliente com o ID especificado, com base nos dados fornecidos no corpo da requisição.
+- DELETE `/clients/{id}`: Deleta o cliente com o ID especificado.
